@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_prijava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registracija"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/naslov"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="@dimen/margina_ispod_naslova"/>
+    <TextView
+        android:id="@+id/tv_first_name_and_last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ime i prezime"
+        android:layout_below="@id/tv_prijava"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/tv_ispod_naslova"/>
+    <EditText
+        android:id="@+id/et_first_name_and_last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@id/tv_first_name_and_last_name"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:layout_below="@id/et_first_name_and_last_name"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/tv_ispod_naslova"/>
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/tv_email"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lozinka"
+        android:layout_below="@id/et_email"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/tv_ispod_naslova"
+        />
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_below="@id/tv_password"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/tv_check_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Potvrda šifre"
+        android:layout_below="@id/et_password"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/tv_ispod_naslova"
+        />
+    <EditText
+        android:id="@+id/et_password_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_below="@id/tv_check_password"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/tv_ages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Godine"
+        android:layout_below="@id/et_password_check"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/tv_ispod_naslova"
+        />
+    <EditText
+        android:id="@+id/et_ages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@id/tv_ages"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spol"
+        android:layout_below="@id/et_ages"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/tv_ispod_naslova"
+        />
+
+    <EditText
+        android:id="@+id/et_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_below="@id/tv_gender"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_user_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vaš opis"
+        android:layout_below="@id/et_gender"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/tv_ispod_naslova"
+
+        />
+    <EditText
+        android:id="@+id/et_user_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textLongMessage"
+        android:layout_below="@id/tv_user_description"
+        android:layout_centerHorizontal="true"
+        android:singleLine="false"
+
+        />
+    <Button
+        android:id="@+id/btn_registracija"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registracija"
+        android:layout_below="@id/et_user_description"
+        android:layout_centerHorizontal="true"
+        android:onClick="registration"
+        android:layout_marginTop="10dp"
+        android:singleLine="false"
+
+        />
+</RelativeLayout>
