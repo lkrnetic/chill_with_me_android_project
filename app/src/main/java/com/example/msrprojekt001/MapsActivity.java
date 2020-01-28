@@ -280,7 +280,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         }
                         String address = address_pom;
                         String user_first_and_last_name = first_and_last_name;
-                        Meeting meeting_pom = new Meeting(event_description, address, latitude, longitude, title, event_time, user_id, user_first_and_last_name);
+                        Meeting meeting_pom = new Meeting(event_description, address, longitude, latitude, title, event_time, user_id, user_first_and_last_name);
                         // Creates and adds marker to the map
                         Gson gson = new Gson();
                         String meeting_pom_string = gson.toJson(meeting_pom, Meeting.class);
@@ -306,13 +306,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     public void addMarkers(GoogleMap map, List<Meeting> meetings){
         for (Meeting meeting : meetings){
-            latLng_pom = new LatLng(meeting.getLatitude(), meeting.getLongitude());
-            Log.d("latlng", latLng_pom.toString());
+            LatLng lat_ltn_add_marker = new LatLng(meeting.getLatitude(), meeting.getLongitude());
+            Log.d("latlng"," "+  meeting.getLatitude() + " " + meeting.getLongitude());
             mMap.addMarker(new MarkerOptions()
-                    .position(latLng_pom)
+                    .position(lat_ltn_add_marker)
                     .draggable(false)
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))).setTag(meeting);
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng_pom));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(lat_ltn_add_marker));
         }
     }
 
@@ -540,7 +540,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     Log.d("poruka", " " + rez.get(i).getLatitude() + rez.get(i).getLongitude());
                 }
             }
-            activity.addMarkers(activity.mMap, rez);
+            activity.addMarkers(activity.mMap, activity.existing_markers);
             // Inače ažuriraj listu
             //activity.kor = rez;
         }
